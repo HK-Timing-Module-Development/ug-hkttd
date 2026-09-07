@@ -1,0 +1,1454 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HkTtd User Guide">
+      
+      
+      
+      
+        <link rel="prev" href="../../firmware/v1-fw/v1-fw/">
+      
+      
+        <link rel="next" href="../../software/software/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Communication - HkTtd User Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#communication" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HkTtd User Guide" class="md-header__button md-logo" aria-label="HkTtd User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HkTtd User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Communication
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HK-Timing-Module-Development/ug-hkttd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ug-hkttd
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Top
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../version/version/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Version
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../hardware/overview/overview/" class="md-tabs__link">
+          
+  
+  
+  Hardware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../firmware/overview/overview/" class="md-tabs__link">
+          
+  
+  
+  Firmware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Communication
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../software/software/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Software
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../practical/practical/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Practical Usage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HkTtd User Guide" class="md-nav__button md-logo" aria-label="HkTtd User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HkTtd User Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HK-Timing-Module-Development/ug-hkttd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ug-hkttd
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../version/version/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Version
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/overview/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/v1-mezzanine/v1-mezzanine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V1 mezzanine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firmware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../firmware/overview/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../firmware/v1-fw/v1-fw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V1 FW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sitcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SiTCP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SiTCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-fifo-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP FIFO configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hkttd-register-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HKTTD register map
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HKTTD register map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hkttdpulseeventpublisher-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HkttdPulseEventPublisher registers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hkttddeliverlink-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HkttdDeliverLink registers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sub module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-fifo-configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP FIFO configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hkttd-register-map_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HKTTD register map
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HKTTD register map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hkttdpulsescheduler-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HkttdPulseScheduler registers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mmci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MMCI
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practical/practical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="communication">Communication</h1>
+<p>The Hyper-K Trigger Timing Distributor (HKTTD) uses two communication mechanisms.
+<a href="https://www.sitcp.net/">SiTCP</a> connects a computer to the Main and Sub modules, while the MIKUMARI data-interface multi-channel interface (MMCI) carries data between the Main and Sub modules.</p>
+<p>The HKTTD communication configuration is currently under development.
+Many of the current register and channel assignments are intended for system testing and may be removed or simplified in future revisions.</p>
+<h2 id="sitcp">SiTCP</h2>
+<p>SiTCP provides data transfer and register access between each module and the computer.</p>
+<p>Transmission Control Protocol (TCP) uses a first-in, first-out (FIFO)-like interface.
+The FPGA writes data to the transmit FIFO, and SiTCP transfers the data to the computer.</p>
+<p>Remote Bus Control Protocol (RBCP) allows user software to read and write registers in the FPGA.
+These registers are used to configure the FPGA and monitor its status.</p>
+<p>HKTTD uses a 16-bit address composed of a 4-bit module ID and a 12-bit local address:</p>
+<table>
+<thead>
+<tr>
+<th>Bits</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15–12</td>
+<td>Module ID</td>
+</tr>
+<tr>
+<td>11–0</td>
+<td>Local address</td>
+</tr>
+</tbody>
+</table>
+<p>The register maps below list only the modules specific to HKTTD.
+Registers provided by the AMANEQ platform are outside the scope of this guide.</p>
+<h3 id="main-module">Main module</h3>
+<h4 id="tcp-fifo-configuration">TCP FIFO configuration</h4>
+<p>The Main firmware implements one SiTCP connection.
+Its TCP transmit FIFO sends the measured phase-shift value for MIKUMARI link 0 when the value changes.
+Each transmitted value is a signed two's-complement 32-bit fixed-point value with 25 fractional bits and can be positive or negative.
+Multiply the signed value by <code>8 ns / 2^25</code> to obtain the measured phase shift.
+The value is transmitted in big-endian byte order, with the most-significant byte first.</p>
+<h4 id="hkttd-register-map">HKTTD register map</h4>
+<p>The Main <code>BusController</code> uses the following module ID assignments:
+The assignments are defined in <code>HkttdMain/hdl/defBusAddressMap.vhd</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Module ID</th>
+<th>Constant</th>
+<th>Destination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x0</code></td>
+<td><code>kHPP</code></td>
+<td><code>HkttdPulseEventPublisher</code></td>
+</tr>
+<tr>
+<td><code>0x1</code>–<code>0x8</code></td>
+<td><code>kHDL1</code>–<code>kHDL8</code></td>
+<td><code>HkttdDeliverLink</code> 1–8</td>
+</tr>
+</tbody>
+</table>
+<p><code>kHDL1</code> through <code>kHDL8</code> correspond to CDD-OPT optical ports 0 through 7, respectively.</p>
+<h5 id="hkttdpulseeventpublisher-registers">HkttdPulseEventPublisher registers</h5>
+<p>The <code>HkttdPulseEventPublisher</code> registers are assigned to Main module ID <code>0x0</code>.
+Their local addresses are defined in <code>hkttd-hdl/hkttdCore/defHkttdPulseEventPublisher.vhd</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Local address</th>
+<th>Access</th>
+<th>Size</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x000</code></td>
+<td>Read/write</td>
+<td>1 byte</td>
+<td>Enable the external signal pulse and dummy pulse</td>
+</tr>
+<tr>
+<td><code>0x100</code></td>
+<td>Read/write</td>
+<td>4 bytes</td>
+<td>Dummy-pulse period</td>
+</tr>
+</tbody>
+</table>
+<p>The control register at local address <code>0x000</code> uses the following bit assignments:</p>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Enable the external signal pulse (<code>0</code>: disabled, <code>1</code>: enabled)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Enable the dummy pulse (<code>0</code>: disabled, <code>1</code>: enabled)</td>
+</tr>
+<tr>
+<td>7–2</td>
+<td>Unused</td>
+</tr>
+</tbody>
+</table>
+<p>The dummy-pulse period at local address <code>0x100</code> is an unsigned 32-bit value with a unit of 1 ns.
+Its default value is <code>0x000186A0</code>, corresponding to 100 µs.</p>
+<h5 id="hkttddeliverlink-registers">HkttdDeliverLink registers</h5>
+<p>Each link uses the same local address map.
+The local addresses are defined in <code>hkttd-hdl/hkttdCore/defHkttdDeliverLink.vhd</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Local address</th>
+<th>Access</th>
+<th>Size</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pulse counters</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x000</code></td>
+<td>Write</td>
+<td>1 byte</td>
+<td>Reset the signal-pulse counter</td>
+</tr>
+<tr>
+<td><code>0x010</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Signal-pulse counter</td>
+</tr>
+<tr>
+<td><code>0x100</code></td>
+<td>Write</td>
+<td>1 byte</td>
+<td>Reset the dummy-pulse counter</td>
+</tr>
+<tr>
+<td><code>0x110</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Dummy-pulse counter</td>
+</tr>
+<tr>
+<td><strong>Round-trip transmission latency</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x200</code></td>
+<td>Read</td>
+<td>2 bytes</td>
+<td>Transmission latency</td>
+</tr>
+<tr>
+<td><strong>MIKUMARI status monitoring</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x300</code></td>
+<td>Write</td>
+<td>1 byte</td>
+<td>Reset the MIKUMARI status and phase-shift counters</td>
+</tr>
+<tr>
+<td><code>0x310</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Lane-up counter (<code>counter_cbt_lane_up</code>)</td>
+</tr>
+<tr>
+<td><code>0x320</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>MIKUMARI link-up counter</td>
+</tr>
+<tr>
+<td><code>0x330</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Pattern-error counter</td>
+</tr>
+<tr>
+<td><code>0x340</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Checksum-error counter</td>
+</tr>
+<tr>
+<td><code>0x350</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Shut-off counter</td>
+</tr>
+<tr>
+<td><strong>Phase monitoring</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x360</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Measured phase shift</td>
+</tr>
+<tr>
+<td><code>0x370</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Positive phase-shift counter</td>
+</tr>
+<tr>
+<td><code>0x380</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Negative phase-shift counter</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pulse counters.</strong>
+Each <code>HkttdDeliverLink</code> maintains separate counters for signal and dummy pulses.
+Writing a counter-reset register transmits the value captured before the reset to the connected Sub module through the corresponding MMCI channel and then clears the counter.</p>
+<p><strong>Round-trip transmission latency.</strong>
+The Main module periodically sends a timing pulse over the MIKUMARI link.
+The returned pulse captures the timing-counter value at local address <code>0x200</code>.
+This register is an unsigned 16-bit value with a unit of 8 ns.
+Multiply the register value by 8 ns to obtain the round-trip transmission latency.</p>
+<p><strong>MIKUMARI status monitoring.</strong>
+These registers count falling edges of the CBT lane-up and MIKUMARI link-up signals, and rising edges of the pattern-error, checksum-error, and shut-off-request signals.
+Writing local address <code>0x300</code> clears these counters and the positive and negative phase-shift counters.</p>
+<p><strong>Phase monitoring.</strong>
+The measured phase shift at local address <code>0x360</code> is a signed two's-complement 32-bit fixed-point value with 25 fractional bits and can be positive or negative.
+Multiply the signed register value by <code>8 ns / 2^25</code> to obtain the measured phase shift.
+The positive and negative phase-shift counters count phase-adjustment events in the corresponding direction.
+Each event corresponds to a 78 ps adjustment step in the current Main firmware.</p>
+<h3 id="sub-module">Sub module</h3>
+<h4 id="tcp-fifo-configuration_1">TCP FIFO configuration</h4>
+<p>The Sub firmware implements one SiTCP connection.
+Its TCP transmit FIFO sends the measured latency difference when a dummy pulse is generated.
+Each transmitted value is an unsigned 16-bit value with a unit of 8 ns.
+Multiply the value by 8 ns to obtain the measured latency difference.
+The value is transmitted in big-endian byte order, with the most-significant byte first.</p>
+<h4 id="hkttd-register-map_1">HKTTD register map</h4>
+<p>The Sub <code>BusController</code> uses the following module ID assignments:
+The assignments are defined in <code>HkttdSub/hdl/defBusAddressMap.vhd</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Module ID</th>
+<th>Constant</th>
+<th>Destination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x0</code></td>
+<td><code>kHPS</code></td>
+<td><code>HkttdPulseScheduler</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="hkttdpulsescheduler-registers">HkttdPulseScheduler registers</h5>
+<p>The <code>HkttdPulseScheduler</code> registers are assigned to Sub module ID <code>0x0</code>.
+Their local addresses are defined in <code>hkttd-hdl/hkttdCore/defHkttdPulseScheduler.vhd</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Local address</th>
+<th>Access</th>
+<th>Size</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pulse-generation parameters</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x000</code></td>
+<td>Read/write</td>
+<td>2 bytes</td>
+<td>Pulse-generation delay</td>
+</tr>
+<tr>
+<td><code>0x010</code></td>
+<td>Read/write</td>
+<td>2 bytes</td>
+<td>Pulse width</td>
+</tr>
+<tr>
+<td><strong>Pulse scalers</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x100</code></td>
+<td>Read</td>
+<td>8 bytes</td>
+<td>Signal-pulse scaler</td>
+</tr>
+<tr>
+<td><code>0x110</code></td>
+<td>Read</td>
+<td>8 bytes</td>
+<td>Dummy-pulse scaler</td>
+</tr>
+<tr>
+<td><strong>MIKUMARI status monitoring</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x200</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Pattern-error counter</td>
+</tr>
+<tr>
+<td><code>0x210</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Checksum-error counter</td>
+</tr>
+<tr>
+<td><code>0x220</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>Lane-up counter (<code>lane_up_bus</code>)</td>
+</tr>
+<tr>
+<td><code>0x230</code></td>
+<td>Read</td>
+<td>4 bytes</td>
+<td>MIKUMARI link-up counter</td>
+</tr>
+<tr>
+<td><strong>Debug control</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x300</code></td>
+<td>Write</td>
+<td>1 byte</td>
+<td>Assert the development-only <code>flag_pc</code> strobe</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pulse-generation parameters.</strong>
+The pulse-generation delay and pulse width are unsigned 16-bit values with a unit of 1 ns.
+Their default values are <code>0x1388</code> and <code>0x000A</code>, corresponding to 5 µs and 10 ns, respectively.
+The same parameters are applied to both Sub-module pulse outputs.</p>
+<p><strong>Pulse scalers.</strong>
+Each 64-bit scaler compares the pulse counts recorded by the Main and Sub modules.
+Bits 63–32 contain the counter value received from the Main module through MMCI, while bits 31–0 contain the corresponding counter value captured by the Sub module.
+The Sub-module counter is cleared when the Main-module counter value is received.
+These values can be used to evaluate the pulse-transmission efficiency by comparing the Sub-module count with the Main-module count.
+When the Main-module count is nonzero, calculate the efficiency as the Sub-module count divided by the Main-module count.</p>
+<p><strong>MIKUMARI status monitoring.</strong>
+These registers contain the MIKUMARI monitoring counters captured when the dummy-pulse counter value is received through MMCI.
+The pattern-error and checksum-error counters count rising edges, while the lane-up and link-up counters count falling edges.
+The internal counters are cleared after their values are captured.</p>
+<p><strong>Debug control.</strong>
+Writing local address <code>0x300</code> from the computer asserts the internal <code>flag_pc</code> strobe for one 8 ns system-clock cycle.
+The strobe is intended for PC-controlled debugging, similar to a trigger signal.
+It is currently not connected to other logic and is retained for development.
+This register is expected to be removed in a future revision.</p>
+<p>The addresses in these tables are base local addresses.
+Multi-byte values are accessed one byte at a time, beginning with the least-significant byte at the base address.</p>
+<h2 id="mmci">MMCI</h2>
+<p>MMCI multiplexes multiple data channels over each MIKUMARI link between the Main and Sub modules.
+Each channel is identified by an 8-bit address and has an assigned priority and data width.</p>
+<p>The current channel assignments are defined in <code>hkttd-hdl/hkttdCore/defMmciAddress.vhd</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Address</th>
+<th>Direction</th>
+<th>Data</th>
+<th>Transmission condition</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x00</code></td>
+<td>Main → Sub</td>
+<td>Phase-compensated pulse timing</td>
+<td>When a pulse is sampled and phase compensation is ready</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>0x01</code></td>
+<td>Main → Sub</td>
+<td>Uncompensated pulse timing</td>
+<td>When a pulse is sampled</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>Main → Sub</td>
+<td>Signal-pulse counter</td>
+<td>When local address <code>0x000</code> of the corresponding <code>HkttdDeliverLink</code> module (<code>0x1</code>–<code>0x8</code>) in the Main firmware is written</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>0x03</code></td>
+<td>Main → Sub</td>
+<td>Dummy-pulse counter</td>
+<td>When local address <code>0x100</code> of the corresponding <code>HkttdDeliverLink</code> module (<code>0x1</code>–<code>0x8</code>) in the Main firmware is written</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>The counter channels transmit the counter value captured before the corresponding counter is cleared.
+The selected <code>HkttdDeliverLink</code> module in the Main firmware determines which Sub module receives the counter value.
+The phase-compensated timing data is used for <code>NIM_OUT 1</code>, while the uncompensated timing data is used for <code>NIM_OUT 2</code>.</p>
+<p>The MMCI implementation supports channels in both directions.
+All HKTTD channels currently defined in <code>defMmciAddress.vhd</code> transmit data from the Main module to the Sub module.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
