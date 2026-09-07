@@ -34,5 +34,6 @@ nav:
   - Firmware:
       - Overview: firmware/overview/overview.md
       - V1 FW: firmware/v1-fw/v1-fw.md
+  - Communication: communication/communication.md
   - Software: software/software.md
   - Practical Usage: practical/practical.md
