@@ -34,7 +34,7 @@ The Main firmware implements one SiTCP connection.
 Its TCP transmit FIFO sends the measured phase-shift value for MIKUMARI link 0 when the value changes.
 Each transmitted value is a signed two's-complement 32-bit fixed-point value with 25 fractional bits and can be positive or negative.
 Multiply the signed value by `8 ns / 2^25` to obtain the measured phase shift.
-The value is transmitted in big-endian byte order, with the most-significant byte first.
+The value is transmitted in little-endian byte order, with the least-significant byte first.
 
 #### HKTTD register map
 
